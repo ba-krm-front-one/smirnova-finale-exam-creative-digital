@@ -1,0 +1,54 @@
+@import "variables";
+
+.ba-about{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 555px;
+
+  &__banner{
+    background: $background-color url("../img/about-us.png") 50% no-repeat;
+    background-size: cover;
+    width: 380px;
+    visibility: hidden;
+    &--visible {
+      visibility: visible;
+    }
+
+  }
+  &__header{
+    padding: 75px 10px 10px;
+  }
+
+  &__icon{
+    background: url("../img/icon-aboutus.png") 50% no-repeat;
+    width: 50px;
+    height: 54px;
+
+  }
+
+  &__title{
+    padding-top: 40px;
+  }
+
+  &__description{
+    max-width: 670px;
+    padding-top: 76px;
+  }
+
+  &__text{
+    font-size: 20px;
+  }
+
+  &__btn{
+    border-color: #7d7a7c;
+    color: #7d7a7c;
+    margin-top: 90px;
+  }
+}
+
+@media all and (max-width: 1120px){
+  .ba-about{
+    justify-content: center;
+  }
+}

@@ -1,0 +1,126 @@
+@import "variables";
+
+.ba-team {
+
+  padding-bottom: 10px;
+
+  &__header {
+    padding: 50px 10px 0;
+  }
+
+  &__icon {
+    background: url("../img/icon-team.png") 50% no-repeat;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__title{
+    color: $color-primary--dark;
+  }
+
+  &__member{
+    width: 380px;
+    min-height: 485px;
+    padding: 130px 15px 0;
+
+
+    &__wrapper{
+      width: 100%;
+      background-color: $color-primary--light;
+      position: relative;
+    }
+
+
+    &-photo{
+      position: absolute;
+      border-radius: 50%;
+      border: 13px solid $background-color--light;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+
+    &-info{
+      margin-top: 165px;
+      text-align: center;
+    }
+
+    &-name{
+      color: $background-color;
+      font-family: $font-header;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+    }
+
+    &-occupation{
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    &-social-links{
+      width: 100%;
+      height: 70px;
+      background-color: $background-color;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  &-slider {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 126px 15px 0;
+    position: relative;
+    top: -90px;
+  }
+
+}
+
+
+/* Arrows */
+
+
+
+.ba-team-slider{
+  & .slick-prev,
+  & .slick-next {
+    top: 65%;
+  }
+
+  & .slick-prev {
+    background: url("../img/interface---arrow-left--dark.svg") 50% no-repeat;
+    left: -7%;
+
+  }
+
+  & .slick-next {
+    background: url("../img/interface---arrow-right--dark.svg") 50% no-repeat;
+    right: -7%;
+  }
+
+  & .slick-prev:hover {
+    background: rgba(51, 255, 153, 0.5) url("../img/interface---arrow-left--dark.svg") 50% no-repeat;
+  }
+
+  & .slick-next:hover {
+    background: rgba(51, 255, 153, 0.5) url("../img/interface---arrow-right--dark.svg") 50% no-repeat;
+  }
+
+}
+
+@media all and (max-width: 1160px){
+  .ba-team-slider{
+    .slick-next {
+      right: 0;
+    }
+    .slick-prev {
+      left: 0;
+    }
+  }
+
+}

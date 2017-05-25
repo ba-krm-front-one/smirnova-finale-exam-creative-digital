@@ -1,0 +1,197 @@
+@import "variables";
+
+.ba-contact {
+  position: relative;
+  overflow: hidden;
+
+  &__main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($background-color, 0.5);
+
+  }
+
+  &__header {
+    padding: 56px 10px 0;
+  }
+
+  &__icon {
+    background: url("../img/contact.png") 50% no-repeat;
+    width: 42px;
+    height: 60px;
+  }
+
+  &__forms{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 10px 10px;
+
+  }
+
+  &__input-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+
+  &__input{
+    border-radius: 4px 3px 3px 4px;
+    background-color: rgba($background-color--light, 0.5);
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    padding: 0 25px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: $color-primary--dark;
+
+    &:focus{
+      background-color: $background-color--light;
+    }
+
+
+    &-first-row{
+      height: 56px;
+
+      &:first-child{
+        margin-right: 32px;
+      }
+    }
+
+    &-text-area{
+      width: 100%;
+      max-height: 200px;
+      padding-top: 25px;
+    }
+
+  }
+
+  &__info{
+    margin-top: 54px;
+    &-block{
+      background-color: rgba($color-primary--light, 0.8);
+      width: 348px;
+      height: 91px;
+      display: flex;
+      position: relative;
+      left: calc(100% - 91px);
+      transition: 0.7s;
+
+      &:hover{
+        left: calc(100% - 348px)
+      }
+    }
+
+
+    &-img{
+      width: 91px;
+      height: 91px;
+      background-color: $background-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-text{
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__btn{
+    display: block;
+    width: 293px;
+    height: 70px;
+    border-radius: 4px;
+    background-color: $background-color;
+    color: $background-color--light;
+    font-family: $font-header;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 4px solid #8783b0;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+    &:hover{
+      background-color: #33FF99;
+      border: 4px solid $background-color;
+    }
+  }
+}
+::-webkit-input-placeholder {color:$color-primary--light;}
+::-moz-placeholder          {color:$color-primary--light;}/* Firefox 19+ */
+:-moz-placeholder           {color:$color-primary--light;}/* Firefox 18- */
+:-ms-input-placeholder      {color:$color-primary--light;}
+
+#map {
+  width: 100%;
+  min-height: 900px;
+
+}
+
+.ba-scroll-up{
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  right: 130px;
+  bottom: 45px;
+  display: block;
+  transition: 0.25s;
+  background: rgba($background-color, 0.5) url("../img/interface---arrow-top-.png") 50% no-repeat;
+
+  &:hover{
+    background: $background-color url("../img/interface---arrow-top-.png") 50% no-repeat;
+  }
+}
+
+
+@media (max-width: 365px) {
+  .ba-contact__info-block{
+    width: 275px;
+    font-size: 16px;
+    &:hover{
+      left: calc(100% - 270px)
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .ba-contact__input-wrap{
+    flex-direction: column;
+  }
+  .ba-contact__input-first-row:first-child{
+    margin-right: 0;
+  }
+
+  .ba-contact__btn{
+    width: 230px;
+  }
+
+  #map {
+    min-height: 1000px;
+
+  }
+}
+
+@media (max-width: 840px) {
+  .ba-scroll-up{
+    right: 0;
+  }
+}
+
+@media (max-width: 445px) {
+  .ba-scroll-up{
+    display: none;
+  }
+}

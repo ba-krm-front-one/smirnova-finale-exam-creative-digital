@@ -1,0 +1,130 @@
+@import "normalize";
+@import "layout";
+@import "variables";
+@import "slick";
+@import "header";
+@import "about";
+@import "services";
+@import "works";
+@import "team";
+@import "contact";
+@import "finish";
+
+
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  font-family: $font-primary;
+  color: $color-primary--dark;
+  font-size: 18px;
+  background-color: $background-color--light;
+
+}
+
+.ba-section{
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 0 15px;
+
+  &__header{
+
+    &-icon{
+      margin: 0 auto;
+    }
+
+    &-title{
+      text-align: center;
+      color: $color-primary--light;
+      font-family: $font-header;
+      font-size: 36px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &--dark{
+        color: $color-primary--dark;
+      }
+    }
+  }
+
+
+
+
+}
+
+.ba-btn{
+  display: block;
+  width: 195px;
+  height: 50px;
+  border: 1px solid;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:hover{
+    background-color: #33FF99;
+    border: 2px solid;
+  }
+}
+
+.ba-social-link{
+  display: block;
+  margin: 0 12.5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  &-behance{
+    background-image: url("../img/behance.svg");
+  }
+
+  &-linkedin{
+    background-image: url("../img/linked-in.svg");
+  }
+
+  &-google{
+    background-image: url("../img/google.svg");
+  }
+
+  &-facebook{
+    background-image: url("../img/facebook.svg");
+  }
+
+  &-twitter{
+    background-image: url("../img/twitter.svg");
+  }
+
+  &:hover{
+    background-color: #33FF99;
+  }
+
+}
+
+
+/*Slick - flex*/
+
+
+.slick-initialized .slick-slide{
+  display: flex;
+  outline: none;
+}
+
+
+@media (max-width: 365px) {
+  .ba-social-link {
+    margin: 0 5px;
+  }
+}

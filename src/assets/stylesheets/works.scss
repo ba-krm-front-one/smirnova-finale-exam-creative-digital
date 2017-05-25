@@ -1,0 +1,134 @@
+@import "variables";
+.ba-works{
+  background: $background-color url("../img/works-bg.png") 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 1000px;
+  color: $color-primary--light;
+  overflow: hidden;
+
+  &__header{
+    padding: 50px 10px 40px;
+  }
+
+  &__icon{
+    background: url("../img/icon-works.png") 50% no-repeat;
+    width: 40px;
+    height: 60px;
+  }
+
+  &-slider{
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 15px;
+    position: relative;
+  }
+  &__item{
+    justify-content: center;
+  }
+
+  &__btn{
+    border-color: $color-primary--light;
+    color: $color-primary--light;
+    margin-top: 105px;
+  }
+}
+
+/*Dots for slick*/
+
+.slick-dotted.slick-slider
+{
+  margin-bottom: 0;
+}
+
+.slick-dots
+{
+  position: absolute;
+  bottom: -55px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.slick-dots li
+{
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button
+{
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  color: transparent;
+  border: 2px solid $background-color--light;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+  background-color: $background-color--light;
+  outline: none;
+}
+
+.slick-dots li.slick-active button
+{
+  background-color: $background-color--light;
+}
+
+/* Arrows */
+
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  transform: translateY(-50%);
+  top: 50%;
+  padding: 0;
+  border: none;
+  outline: none;
+  &:hover{
+    outline: none;
+  }
+ 
+}
+
+.slick-prev {
+  background: url("../img/interface---arrow-left.svg") 50% no-repeat;
+  z-index: 2;
+}
+
+.slick-next {
+  background: url("../img/interface---arrow-right.svg") 50% no-repeat;
+  right: 15px;
+}
+
+.slick-prev:hover {
+  background: rgba(51, 255, 153, 0.5) url("../img/interface---arrow-left.svg") 50% no-repeat;
+  z-index: 2;
+}
+
+.slick-next:hover {
+  background: rgba(51, 255, 153, 0.5) url("../img/interface---arrow-right.svg") 50% no-repeat;
+}
+
+
+
