@@ -1,0 +1,25 @@
+@import "variables";
+
+.ba-footer{
+  background: $background-color;
+  padding: 5%;
+  height: 185px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $color-primary--light;
+  text-align: center;
+
+
+  &__social-links{
+    display: flex;
+  }
+}
+
+@media all and (max-width: 665px){
+  .ba-footer{
+    justify-content: center;
+  }
+
+}
